@@ -46,11 +46,11 @@ public class SupplyController {
 		Supply newSupply = supply.get();
 		if(supply.isPresent()) {
 			
-			newSupply.setName (supplyResponse.getName ());
+			/*newSupply.setName (supplyResponse.getName ());
 			newSupply.setDescription (supplyResponse.getDescription ());
 			newSupply.setUnitsInStock(supplyResponse.getUnitsInStock());
 			newSupply.setAlertStock(supplyResponse.getAlertStock());
-			return repository.save(newSupply);	
+			return repository.save(newSupply)*/
         }
 		
         return null;

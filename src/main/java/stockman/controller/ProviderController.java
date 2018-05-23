@@ -27,6 +27,12 @@ public class ProviderController {
 		return repository.findAll();
 	}
 	
+	@GetMapping("/provider2")
+	public List<Provider> getNotEmptyProviders() {
+		return repository.findNotEmptyProviders();
+	}
+	
+	
 	@GetMapping("/provider/{id}")
 	public Optional<Provider> getProviderById(@PathVariable(value = "id") Long providerId) {
 			return repository.findById(providerId);

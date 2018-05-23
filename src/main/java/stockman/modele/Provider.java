@@ -17,10 +17,10 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import lombok.*;
 
-@Getter
+/*@Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor*/
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 public class Provider implements Serializable{
@@ -36,6 +36,38 @@ public class Provider implements Serializable{
 	
 	@OneToMany(fetch = FetchType.EAGER,mappedBy="provider",cascade = CascadeType.ALL)
 	private List<Supply> supplyList = new ArrayList<>();
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getSiret() {
+		return siret;
+	}
+
+	public void setSiret(Long siret) {
+		this.siret = siret;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public List<Supply> getSupplyList() {
+		return supplyList;
+	}
+
+	public void setSupplyList(List<Supply> supplyList) {
+		this.supplyList = supplyList;
+	}
 	
 
 }
